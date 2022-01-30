@@ -1,5 +1,3 @@
-FROM caddy:2 as base
-
 FROM caddy:2-builder AS builder
 
 RUN apk add --no-cache \
@@ -10,7 +8,7 @@ RUN xcaddy build \
     --with github.com/lucaslorentz/caddy-docker-proxy/plugin \
     --with github.com/caddy-dns/cloudflare
 
-FROM base
+FROM caddy:2
 
 COPY --from=builder /usr/bin/caddy /usr/bin/caddy
 
