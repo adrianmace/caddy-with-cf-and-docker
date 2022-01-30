@@ -2,8 +2,10 @@ name: Build and publish image to ghcr.io
 
 on:
   push:
+    paths-ignore:
+      - '**.md'
   schedule:
-    - cron: "0 4 * * *"
+    - cron: "0 0 * * *"
 
 env:
   REGISTRY: ghcr.io
