@@ -1,4 +1,4 @@
-FROM caddy:2-builder@sha256:c3fe20ea63efe1eb2c4c2346e206b2b1de903d4b176001a28a101b2a8ced0968 AS builder
+FROM caddy:2-builder@sha256:c41bdf72cba4e0b7dea13a24c6a77d208ad4c56ba26ae6315e8b7298ee2911de AS builder
 
 RUN apk add --no-cache \
     gcc \
@@ -8,7 +8,7 @@ RUN xcaddy build \
     --with github.com/lucaslorentz/caddy-docker-proxy/plugin \
     --with github.com/caddy-dns/cloudflare
 
-FROM caddy:2@sha256:50a38e32a96b709de9e5112eb1909b7f03fab16959929da71f342c5bdb114641
+FROM caddy:2@sha256:53e1462eb68d51b5b2995be1c5d0c631fa67824f3fe37d692fe73ca714a7236f
 
 COPY --from=builder /usr/bin/caddy /usr/bin/caddy
 
