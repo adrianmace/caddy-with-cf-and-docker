@@ -8,7 +8,7 @@ RUN xcaddy build \
     --with github.com/lucaslorentz/caddy-docker-proxy/plugin \
     --with github.com/caddy-dns/cloudflare
 
-FROM caddy:2.5.2@sha256:0c53d53e8522cf98d902105f02bef22e92a619d40a55c445bfb44b459f284f9b
+FROM caddy:2.5.2@sha256:6d47dfbdde8d6b271f5c8e177fe723a1373e9a9c08c0fb62fef447afa4683979
 
 COPY --from=builder /usr/bin/caddy /usr/bin/caddy
 
