@@ -5,7 +5,7 @@ RUN apk add --no-cache \
     musl-dev
 
 RUN xcaddy build \
-    --with github.com/lucaslorentz/caddy-docker-proxy/plugin \
+    --with github.com/lucaslorentz/caddy-docker-proxy/v2 \
     --with github.com/caddy-dns/cloudflare
 
 FROM caddy:2.6.4@sha256:ef6ed6e22b469efd5051e1c4cee221d3a0ebebea14bbb5898c8fb4dc70d12d12
