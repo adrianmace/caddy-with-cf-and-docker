@@ -1,4 +1,4 @@
-FROM caddy:2.7.2-builder@sha256:78bf7caca95bd334aad5a1b13a585f61701d703abd05b4814f5df92d29d7c09b AS builder
+FROM caddy:2.7.2-builder@sha256:174e1d24ea7ccb96b55ea9ee70778f5df0ef4fa15511d6b91ebc09121fb630d5 AS builder
 
 RUN apk add --no-cache \
     gcc \
